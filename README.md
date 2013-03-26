@@ -19,7 +19,7 @@
 <ul>
   <li>Cada pessoa poderá manter apenas uma pasta neste repositório.</li>
   <li>Observem a hierarquia de pastas. Você deve criar a referente a seu padrão DENTRO da pasta daquele padrão, seguindo o padrão de nome de pastas, que é: 
-    "seu_nome_com_undescore_separando_os_espacos-_nome_do_padrao_no_mesmo_jeito" 
+    "seu_nome_com_undescore_separando_os_espacos-nome_do_padrao_no_mesmo_jeito" 
     Exemplo:
     "igor_marques-basic_remote_patterns"
   </li>
