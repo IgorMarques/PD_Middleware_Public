@@ -30,4 +30,4 @@
 
 <h3>Quer participar? Entre em contato!</h3>
 
-<p>Procure-nos no grupo: <a href=""></a>
+<p>Procure-nos no nosso <a href="https://www.facebook.com/groups/286862371445875/">grupo</a>.
