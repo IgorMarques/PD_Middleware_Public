@@ -10,7 +10,7 @@
   <li>Identification Patterns - Lucas Bibiano</li>
   <li>Lifecycle Management Patterns - null</li>
   <li>Extension Patterns - null</li>
-  <li>Extended Infrastructure Patterns - null</li>
+  <li>Extended Infrastructure Patterns - SeuRAUL</li>
   <li>Invocation Asynchrony Patterns - null</li>
 </ul>
 
@@ -30,4 +30,6 @@
 
 <h3>Quer participar? Entre em contato!</h3>
 
+
 <p>Procure-nos no nosso <a href="https://www.facebook.com/groups/286862371445875/">grupo</a>.
+
