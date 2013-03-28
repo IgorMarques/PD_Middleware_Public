@@ -6,11 +6,11 @@
 <h3>Quem vai desenvolver cada padrão?</h3>
 
 <ul>
-  <li>Basic Remoting Patterns - Igor Marques</li>
-  <li>Identification Patterns - Lucas Bibiano</li>
-  <li>Lifecycle Management Patterns - null</li>
-  <li>Extension Patterns - Silas Tiago</li>
-  <li>Extended Infrastructure Patterns - SeuRAUL</li>
+  <li>Basic Remoting Patterns - Igor Marques, Rafael Fernandes</li>
+  <li>Identification Patterns - Lucas Bibiano, Lucas Ferreira</li>
+  <li>Lifecycle Management Patterns - Maychell Fernandes</li>
+  <li>Extension Patterns - Silas Tiago, Wendell Pamplona</li>
+  <li>Extended Infrastructure Patterns - SeuRAUL, Adelino Segundo</li>
   <li>Invocation Asynchrony Patterns - null</li>
 </ul>
 
