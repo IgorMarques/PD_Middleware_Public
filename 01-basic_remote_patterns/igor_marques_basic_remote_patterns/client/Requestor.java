@@ -9,6 +9,7 @@ import middleware.igor_marques_basic_remote_patterns.common.Marshaller;
 import middleware.igor_marques_basic_remote_patterns.common.Message;
 import middleware.igor_marques_basic_remote_patterns.soap.SOAPClientRequestHandler;
 import middleware.josiel_extension_patterns.InvocationInterceptor;
+import middleware.raul_extended_infraestructure_patterns.IQoSObserver;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -26,6 +27,8 @@ public class Requestor {
 	
 	private static ArrayList<InvocationInterceptor> interceptors = new ArrayList<InvocationInterceptor>();
 	
+	private static ArrayList<IQoSObserver> qosObserver = new ArrayList<IQoSObserver>();
+	
 	private Requestor() {
 		fac.registerClass(protocol, protocolClass); 
 	};
@@ -37,18 +40,24 @@ public class Requestor {
 		return instance;
 	}
 
-	public static void invoke(String object, String objectID, String method, String... params) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public static void invoke(String object, String objectID, String method, String... params) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, SOAPException {
 		
 		InvocationContext invocation = new InvocationContext(object, objectID, method, params);
 		
 		for (InvocationInterceptor ii : interceptors)
 			ii.intercept(invocation);
 
+		for(IQoSObserver iqs : qosObserver)
+			iqs.callStarted();
+		
 			
 		Message message = marshaller.marshall(invocation);
 		IClientRequestHandler clientHandler = fac.getImplementation(protocol);
 		
-		clientHandler.sendMessage(message);
+		clientHandler.sendMessage(message, null); //FALTA BOTAR O ENDPOINT
+		
+		for(IQoSObserver iqs : qosObserver)
+			iqs.callFinished();
 	}
 
 }
