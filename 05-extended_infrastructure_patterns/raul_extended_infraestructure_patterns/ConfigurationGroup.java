@@ -1,5 +1,5 @@
 
-package raul_extended_infraestructure_patterns;
+package middleware.raul_extended_infraestructure_patterns;
 
 /**
  *
